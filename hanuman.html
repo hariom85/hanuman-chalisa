@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हनुमान चालीसा - Hanuman Chalisa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans Devanagari', 'Hind', sans-serif;
+            background:#eb9c4e; /* your image path */
+             background-repeat: no-repeat; /* don’t repeat the image */
+             background-size: cover; /* fit full screen */
+             
+
+      
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .logo-icon {
+            font-size: 36px;
+            color: #ff9933;
+            margin-right: 12px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: #ff6600;
+            font-size: 2.2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            color: #138808;
+            font-size: 1.2rem;
+            margin-top: 8px;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .nav-btn {
+            background: #ff9933;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            touch-action: manipulation;
+        }
+        
+        .nav-btn:hover, .nav-btn:active {
+            background: #138808;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.active {
+            background: #138808;
+            font-weight: bold;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .main-content {
+            flex: 2;
+            min-width: 0;
+            background: #fcf8f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #ff6600;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ff9933;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        
+        h3 {
+            color: #138808;
+            margin: 20px 0 12px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        
+        .chant {
+            background: #fff5e6;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9933;
+        }
+        
+        .hindi {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 12px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+        
+        .meaning {
+            background: #e6f7e6;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #138808;
+        }
+        
+        .benefits-list {
+            list-style-type: none;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        
+        .benefits-list li:before {
+            content: "✔";
+            color: #138808;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .audio-player {
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        
+        
+        
+        
+        
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            background: lch(61.51% 70.38 70.12 / 0.911);
+            color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin: 18px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.4rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #ff9933;
+        }
+        
+        /* Improved mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 15px 10px;
+                margin-bottom: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .nav {
+                gap: 8px;
+                margin: 15px 0;
+            }
+            
+            .nav-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .main-content, .sidebar {
+                padding: 15px;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .hindi {
+                font-size: 1.3rem;
+            }
+            
+            .chant, .meaning {
+                padding: 15px;
+            }
+            
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+                gap: 10px;
+            }
+            
+            .gallery-item img {
+                height: 100px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .logo-icon {
+                font-size: 32px;
+            }
+            
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-btn {
+                width: 80%;
+                text-align: center;
+            }
+            
+            .hindi {
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
+            
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Animation for spiritual feeling */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .main-content, .sidebar {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        /* Decorative elements */
+        .decoration {
+            text-align: center;
+            margin: 15px 0;
+            font-size: 1.8rem;
+            color: #ff9933;
+        }
+        
+        /* Improved touch targets for mobile */
+        button, .nav-btn {
+            min-height: 44px;
+            min-width: 44px;
+        }
+        
+        /* Prevent horizontal scrolling */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Better text readability on mobile */
+        p, li {
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        /* Focus styles for accessibility */
+        button:focus, .nav-btn:focus {
+            outline: 2px solid #ff9933;
+            outline-offset: 2px;
+        }
+        
+        /* Chalisa verses styling */
+        .verse {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .verse-number {
+            display: inline-block;
+            background: #bd6512;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .doha {
+            background: #ffe6cc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        /* Hindi specific styling */
+        .hindi-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            line-height: 1.8;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">🕉</div>
+                <h1>श्री हनुमान चालीसा</h1>
+            </div>
+            <p class="subtitle">भगवान हनुमान की दिव्य प्रार्थना</p>
+            
+            <div class="nav">
+                <button class="nav-btn active" data-tab="chalisa">चालीसा</button>
+                <button class="nav-btn" data-tab="about">जानकारी</button>
+                <button class="nav-btn" data-tab="benefits">लाभ</button>
+            </div>
+        </header>
+        
+        <div class="content">
+            <div class="main-content">
+                <div id="chalisa-content" class="tab-content">
+                    <h2>हनुमान चालीसा</h2>
+                    
+                    <div class="decoration">🙏</div>
+                    <div><img src="download (1).jpg" width="100%"></div>
+                    
+                    <div class="doha">
+                        <p class="hindi">श्रीगुरु चरन सरोज रज, निज मनु मुकुरु सुधारि।<br>
+                        बरनउँ रघुबर बिमल जसु, जो दायकु फल चारि॥</p>
+                    </div>
+                    
+                    <div class="doha">
+                        <p class="hindi">बुद्धिहीन तनु जानिके, सुमिरौं पवन-कुमार।<br>
+                        बल बुद्धि विद्या देहु मोहिं, हरहु कलेश विकार॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">जय हनुमान ज्ञान गुन सागर। जय कपीस तिहुं लोक उजागर॥ १ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">रामदूत अतुलित बल धामा। अंजनि पुत्र पवनसुत नामा॥ २ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">महाबीर बिक्रम बजरंगी। कुमति निवार सुमति के संगी॥ ३ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">कंचन बरन बिराज सुबेसा। कानन कुंडल कुंचित केसा॥ ४ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">हाथ बज्र औ ध्वजा बिराजै। कांधे मूंज जनेऊ साजै॥ ५ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">संकर सुवन केसरीनंदन। तेज प्रताप महा जग बन्दन॥ ६ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">विद्यावान गुनी अति चातुर। राम काज करिबे को आतुर॥ ७ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">प्रभु चरित्र सुनिबे को रसिया। राम लखन सीता मन बसिया॥ ८ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">सूक्ष्म रूप धरि सियहिं दिखावा। बिकट रूप धरि लंक जरावा॥ ९ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">भीम रूप धरि असुर संहारे। रामचंद्र के काज संवारे॥ १० ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">लाय सजीवन लखन जियाये। श्रीरघुबीर हरषि उर लाये॥ ११ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">रघुपति कीन्ही बहुत बड़ाई। तुम मम प्रिय भरतहि सम भाई॥ १२ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">सहस बदन तुम्हरो जस गावैं। अस कहि श्रीपति कंठ लगावैं॥ १३ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">सनकादिक ब्रह्मादि मुनीसा। नारद सारद सहित अहीसा॥ १४ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">जम कुबेर दिगपाल जहां ते। कबि कोबिद कहि सके कहां ते॥ १५ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">तुम उपकार सुग्रीवहिं कीन्हा। राम मिलाय राज पद दीन्हा॥ १६ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">तुम्हरो मंत्र बिभीषन माना। लंकेस्वर भए सब जग जाना॥ १७ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">जुग सहस्र जोजन पर भानू। लील्यो ताहि मधुर फल जानू॥ १८ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">प्रभु मुद्रिका मेलि मुख माहीं। जलधि लांघि गये अचरज नाहीं॥ १९ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">दुर्गम काज जगत के जेते। सुगम अनुग्रह तुम्हरे तेते॥ २० ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">राम दुआरे तुम रखवारे। होत न आज्ञा बिनु पैसारे॥ २१ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">सब सुख लहै तुम्हारी सरना। तुम रक्षक काहू को डर ना॥ २२ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">आपन तेज सम्हारो आपै। तीनों लोक हांक तें कांपै॥ २३ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">भूत पिसाच निकट नहिं आवै। महाबीर जब नाम सुनावै॥ २४ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">नासै रोग हरै सब पीरा। जपत निरंतर हनुमत बीरा॥ २५ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">संकट तें हनुमान छुड़ावै। मन क्रम बचन ध्यान जो लावै॥ २६ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">सब पर राम तपस्वी राजा। तिन के काज सकल तुम साजा॥ २७ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">और मनोरथ जो कोई लावै। सोइ अमित जीवन फल पावै॥ २८ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">चारों जुग परताप तुम्हारा। है परसिद्ध जगत उजियारा॥ २९ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">साधु संत के तुम रखवारे। असुर निकंदन राम दुलारे॥ ३० ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">अष्ट सिद्धि नौ निधि के दाता। अस बर दीन जानकी माता॥ ३१ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">राम रसायन तुम्हरे पासा। सदा रहो रघुपति के दासा॥ ३२ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">तुम्हरे भजन राम को पावै। जनम-जनम के दुख बिसरावै॥ ३३ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">अन्तकाल रघुबर पुर जाई। जहां जन्म हरि भक्त कहाई॥ ३४ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">और देवता चित्त न धरई। हनुमत सेइ सर्ब सुख करई॥ ३५ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">संकट कटै मिटै सब पीरा। जो सुमिरै हनुमत बलबीरा॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">जै जै जै हनुमान गोसाईं। कृपा करहु गुरुदेव की नाईं॥ ३७ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">जो सत बार पाठ कर कोई। छूटहि बंदि महा सुख होई॥ ३८ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">जो यह पढ़ै हनुमान चालीसा। होय सिद्धि साखी गौरीसा॥ ३९ ॥</p>
+                    </div>
+                    
+                    <div class="verse">
+                        <p class="hindi">तुलसीदास सदा हरि चेरा। कीजै नाथ हृदय मंह डेरा॥ ४० ॥</p>
+                    </div>
+                    
+                    <div class="doha">
+                        <p class="hindi">पवन तनय संकट हरन मंगल मूरति रूप।<br>
+                        राम लखन सीता सहित हृदय बसहु सुर भूप॥</p>
+                    </div>
+                </div>
+                
+                <div id="about-content" class="tab-content" style="display: none;">
+                    <h2>हनुमान चालीसा के बारे में</h2>
+                    <div class="meaning">
+                        <p>हनुमान चालीसा एक हिन्दू भक्ति गीत है जो भगवान हनुमान को समर्पित है। इसे तुलसीदास जी ने 16वीं शताब्दी में अवधी भाषा में लिखा था। इसमें 40 छंद हैं जो हनुमान जी की शक्ति, भक्ति और साहस की प्रशंसा करते हैं।</p>
+                    </div>
+                    
+                    <h3>महत्व</h3>
+                    <div class="chant">
+                        <p class="hindi">हनुमान चालीसा का पाठ करने से आध्यात्मिक आशीर्वाद, बुराई से सुरक्षा और कठिन समय में शक्ति मिलती है। यह सबसे लोकप्रिय हिन्दू प्रार्थनाओं में से एक है और लाखों लोग इसे रोज पढ़ते हैं।</p>
+                    </div>
+                    
+                    <h3>तुलसीदास जी</h3>
+                    <div class="chant">
+                        <p class="hindi">गोस्वामी तुलसीदास जी एक महान संत और कवि थे। उन्होंने रामचरितमानस की रचना की जिसमें हनुमान चालीसा भी शामिल है। उनकी रचनाएँ भक्ति और ज्ञान का अद्भुत संगम हैं।</p>
+                    </div>
+                </div>
+                
+                <div id="benefits-content" class="tab-content" style="display: none;">
+                    <h2>हनुमान चालीसा पाठ के लाभ</h2>
+                    <div class="meaning">
+                        <p>हनुमान चालीसा के नियमित पाठ से भक्तों को कई आध्यात्मिक और सांसारिक लाभ मिलते हैं।</p>
+                    </div>
+                    
+                    <h3>आध्यात्मिक लाभ</h3>
+                    <ul class="benefits-list">
+                        <li>भगवान हनुमान के साथ भक्ति और जुड़ाव विकसित होता है</li>
+                        <li>ग्रहों की अशुभता और बुरे प्रभावों से मुक्ति मिलती है</li>
+                        <li>नकारात्मक ऊर्जा और बुरी आत्माओं से सुरक्षा मिलती है</li>
+                        <li>डर और चिंता को दूर करने में मदद मिलती है</li>
+                        <li>आत्मविश्वास और आंतरिक शक्ति बढ़ती है</li>
+                    </ul>
+                    
+                    <h3>सांसारिक लाभ</h3>
+                    <ul class="benefits-list">
+                        <li>कामनाओं में सफलता और बाधाओं पर विजय मिलती है</li>
+                        <li>एकाग्रता और मानसिक स्पष्टता में सुधार होता है</li>
+                        <li>स्वास्थ्य समस्याओं को दूर करने में मदद मिलती है</li>
+                        <li>परिवार में शांति और सद्भाव बढ़ता है</li>
+                        <li>यात्रा और कठिन समय में सुरक्षा मिलती है</li>
+                    </ul>
+                    
+                    <div class="chant">
+                        <p><strong>नोट:</strong> सर्वोत्तम परिणामों के लिए, चालीसा का पाठ भक्ति और इसके अर्थ की समझ के साथ करें, अधिमानतः सुबह या मंगलवार की शाम को।</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <h2>हनुमान जी के बारे में</h2>
+                <p>हनुमान जी रामभक्त, शिवजी के अवतार और वानरों के सेनापति हैं। वे बजरंगबली, संकटमोचन, पवनपुत्र और महावीर जैसे नामों से जाने जाते हैं।</p>
+                
+                <div class="meaning">
+                    <h3>विशेषताएं</h3>
+                    <p>हनुमान जी को असीम बल, अदम्य साहस, अटूट भक्ति और महान ज्ञान के लिए जाना जाता है। वे भगवान राम के परम भक्त हैं और संकटों को दूर करने वाले देवता माने जाते हैं।</p>
+                </div>
+                
+                <h3>पूजा के लाभ</h3>
+                <ul class="benefits-list">
+                    <li>सभी संकटों और कठिनाइयों का नाश</li>
+                    <li>शारीरिक और मानसिक बल की प्राप्ति</li>
+                    <li>नकारात्मक शक्तियों से सुरक्षा</li>
+                    <li>मन की शांति और तनाव में कमी</li>
+                    <li>आध्यात्मिक उन्नति में सहायता</li>
+                </ul>
+                
+                
+                
+                <div class="meaning">
+                    <h3>पाठ का उचित समय</h3>
+                    <p>हनुमान चालीसा पाठ के सर्वोत्तम समय:</p>
+                    <ul class="benefits-list">
+                        <li>मंगलवार और शनिवार की सुबह</li>
+                        <li>महत्वपूर्ण कार्य से पहले</li>
+                        <li>कठिनाई या डर के समय में</li>
+                        <li>मन की शांति के लिए शाम को</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <h3>भगवान हनुमान आपको आशीर्वाद दें</h3>
+                <p>यह वेबसाइट दुनिया भर में भगवान हनुमान के सभी भक्तों को समर्पित है।</p>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <p>हनुमान चालीसा | दिव्य प्रार्थना |  हरिओम झा</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Enhanced tab navigation with better mobile support
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            // Show chalisa content by default
+            document.getElementById('chalisa-content').style.display = 'block';
+            
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Hide all content
+                    tabContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    
+                    // Show the selected content
+                    const tabId = this.getAttribute('data-tab') + '-content';
+                    const selectedContent = document.getElementById(tabId);
+                    if (selectedContent) {
+                        selectedContent.style.display = 'block';
+                        
+                        // Scroll to top of content for better mobile experience
+                        selectedContent.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    }
+                });
+            });
+            
+            // Handle touch events for better mobile interaction
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            document.addEventListener('touchstart', function(event) {
+                touchStartX = event.changedTouches[0].screenX;
+            }, false);
+            
+            document.addEventListener('touchend', function(event) {
+                touchEndX = event.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swipe left - go to next tab
+                    const activeIndex = Array.from(navButtons).findIndex(btn => btn.classList.contains('active'));
+                    if (activeIndex < navButtons.length - 1) {
+                        navButtons[activeIndex + 1].click();
+                    }
+                }
+                
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swipe right - go to previous tab
+                    const activeIndex = Array.from(navButtons).findIndex(btn => btn.classList.contains('active'));
+                    if (activeIndex > 0) {
+                        navButtons[activeIndex - 1].click();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
